@@ -1,0 +1,105 @@
+#!/usr/bin/env zsh
+
+echo Loading $HOME/.zsh_custom_completion
+
+case "$(uname -s)" in
+
+    Darwin)
+    # echo 'Mac OS X'
+    ### gcloud zsh auto completion
+    [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ] && source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+    [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ] && source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+    ;;
+
+    Linux)
+    # echo 'Linux'
+    ### gcloud zsh auto completion
+    [ -f "/snap/google-cloud-sdk/current/completion.zsh.inc" ] && source "/snap/google-cloud-sdk/current/completion.zsh.inc"
+    [ -f "/snap/google-cloud-sdk/current/path.zsh.inc" ] && source "/snap/google-cloud-sdk/current/path.zsh.inc"
+    ;;
+
+    CYGWIN*|MINGW32*|MSYS*|MINGW*)
+    # echo 'MS Windows'
+    ;;
+
+    *)
+    # echo 'Other OS'
+    ;;
+esac
+
+# load asdf
+if [ -d "$HOME/.asdf" ]; then
+    # append completions to fpath
+    fpath=(${ASDF_DIR}/completions $fpath)
+    # initialise completions with ZSH's compinit
+    autoload -Uz compinit
+fi
+
+# zsh completions (https://formulae.brew.sh/formula/zsh-completions)
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+fi
+
+### fzf installed from git
+# git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+# ~/.fzf/install
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+## user level zsh completion
+[ -d ~/.zsh_completion.d ] || mkdir ~/.zsh_completion.d
+
+FZF_SHELL_COMPLETION="$(dirname $(asdf which fzf))/../shell"
+if type brew &>/dev/null
+then
+    [[ -f "${FZF_SHELL_COMPLETION}/completion.zsh" ]] && source "${FZF_SHELL_COMPLETION}/completion.zsh"
+    [[ -f "${FZF_SHELL_COMPLETION}/key-bindings.zsh" ]] && source "${FZF_SHELL_COMPLETION}/key-bindings.zsh"
+else
+    [[ -f "${FZF_SHELL_COMPLETION}/completion.bash" ]] && source "${FZF_SHELL_COMPLETION}/completion.bash"
+    [[ -f "${FZF_SHELL_COMPLETION}/key-bindings.bash" ]] && source "${FZF_SHELL_COMPLETION}/key-bindings.bash"
+fi
+
+### pulumi zsh auto-completion
+[ -f ~/.zsh_completion.d/pulumi.zsh-completion ] || pulumi gen-completion zsh > ~/.zsh_completion.d/pulumi.zsh-completion
+
+### poetry zsh auto-completion - maybe use sudo su and install poetry in root manually
+[ -f ~/.zsh_completion.d/poetry.zsh-completion ] || poetry completions zsh > ~/.zsh_completion.d/poetry.zsh-completion
+
+# Install git auto completion scripts
+[ -f ~/.zsh_completion.d/git-completion.zsh-completion ] || curl \
+    -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh \
+    -o ~/.zsh_completion.d/git-completion.zsh-completion
+
+[ -f ~/.zsh_completion.d/git-prompt.sh.zsh-completion ] || curl \
+    -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh \
+    -o ~/.zsh_completion.d/git-prompt.sh.zsh-completion
+
+### gita zsh auto-completion
+[ -f ~/.zsh_completion.d/gita-completion.zsh-completion ] || curl \
+    -L https://raw.githubusercontent.com/nosarthur/gita/master/.gita-completion.zsh \
+    -o ~/.zsh_completion.d/gita-completion.zsh-completion
+
+### brew load bash completion
+### https://docs.brew.sh/Shell-Completion
+if type brew &>/dev/null
+then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
+  then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
+    do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+  fi
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+  autoload -Uz compinit
+else
+    for COMPLETION in ~/.bash_completion.d/* ; do
+        [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+fi
+
+

@@ -1,0 +1,60 @@
+	# 
+	# commandline: difftool --cached
+	#  will open vimdiff
+	# commandline: difftool --gui --cached 
+	#  will open kdiff3
+	# now replace to p4merge
+[diff]
+	#tool = vimdiff
+	#guitool = kdiff3
+	tool = p4merge
+	guitool = p4merge
+[difftool]
+	prompt = false
+[difftool "p4merge"]
+	trustExitCode = false
+	cmd = /usr/local/bin/p4merge "$LOCAL" "$REMOTE" 
+[difftool "vimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[merge]
+	#tool = vimdiff
+	#guitool = kdiff3
+	tool = p4merge
+	guitool = p4merge
+	conflictstyle = diff3
+[mergetool]
+	keepBackup = false
+	prompt = false
+[mergetool "p4merge"]
+	cmd = /usr/local/bin/p4merge "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$LOCAL" "$PWD/$MERGED"
+	keepTemporaries = false
+	trustExitCode = false
+	keepBackup = false
+[mergetool "sourcetree"]
+	trustExitCode = true
+[mergetool "vimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[core]
+	#editor = 'subl' --wait
+	editor = 'nvim'
+	excludesfile = ~/dev/dev-setup/gitscripts/.gitignore
+	autocrlf = false
+[user]
+	name = changeme
+	email = changeme@invalidemail.com
+    path = ~/.tel.gitconfig
+[includeIf "gitdir:~/dev/tel.src/"]
+    path = ~/.tel.gitconfig
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[credential]
+	helper = store
+	interactive = false
+	modalPrompt = false
+[pull]
+	rebase = false
+
+

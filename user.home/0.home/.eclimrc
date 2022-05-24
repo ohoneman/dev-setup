@@ -1,0 +1,14 @@
+# increase heap size
+-Xmx512M
+
+# set the default file encoding
+file.encoding=utf-8
+
+#which eclipse workspace to use
+osgi.instance.area.default=@user.home/eclipse-workspace
+
+# proxy
+#http.proxyHost=http://www-proxy.com
+#http.proxyPort=80
+
+org.eclim.java.search.sort=["src/main", "src/test"]

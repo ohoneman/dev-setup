@@ -1,0 +1,64 @@
+﻿" support windows copy&past {
+    if LINUX() || OSX()
+        "do notthing
+    elseif WINDOWS()
+        "windows problem with promptfind and other things, just make same as mac.
+        " source $VIMRUNTIME/mswin.vim
+        " behave mswin
+    endif
+" }
+
+" set the guifont {
+let g:spacevim_guifont = 'Consolas:h12'
+if !empty(g:spacevim_guifont)
+    exe 'set guifont=' . g:spacevim_guifont
+endif
+" } 
+
+" default window size {
+    set lines=25 columns=120
+" }
+
+" clipboard {
+    set clipboard=unnamed
+    if has('unnamedplus')
+        set clipboard=unnamed,unnamedplus
+    endif
+" }
+
+" fix fileencording problem sometimes{
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+endif
+"}
+
+" java decompiler {
+    au BufReadCmd *.class setl readonly nomodified | %!jad -p <afile>
+"}
+
+
+" mapping keys on OS {
+    if OSX()
+        nnoremap <F5> :silent update<Bar>silent !/usr/bin/open -a "/Applications/Google Chrome.app" "%:p" &<CR>
+    elseif WINDOWS()
+        nnoremap <silent> <F5> :update<Bar>silent !start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "file://%:p"<CR>
+    endif
+" }
+
+" syntastic disable xml checker {
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["xml"] }
+" }
+
+"ctrlp max file {
+    let g:ctrlp_max_files=0
+    let g:ctrlp_max_depth=40
+" }
+

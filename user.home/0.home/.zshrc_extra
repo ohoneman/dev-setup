@@ -1,0 +1,47 @@
+echo Loading $HOME/.zshrc_extra
+
+plugins=(
+  adb
+  asdf
+  brew
+  colorize
+  docker
+  docker-compose
+  fd
+  fzf
+  gcloud
+  git
+  git-lfs
+  golang
+  iterm2
+  kubectx
+  lxd
+  man
+  multipass
+  mvn
+  node
+  npm
+  osx
+  pip
+  ripgrep
+  rsync
+  ruby
+  rust
+  ssh-agent
+  systemadmin
+  systemd
+  tig
+  tmux
+  ufw
+  vagrant
+  vscode
+  xcode
+  yarn
+  yum
+)
+
+[ -x "$(command -v direnv)" ] && eval "$(direnv hook zsh)"
+
+### Fix for making Docker plugin work
+autoload -U compinit
+###

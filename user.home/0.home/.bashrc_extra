@@ -1,0 +1,6 @@
+echo Loading $HOME/.bashrc_extra
+
+[ -x "$(command -v direnv)" ] && eval "$(direnv hook bash)"
+
+export PATH=$PATH:/opt/ghidra
+export PATH=$PATH:/opt/jadx/bin

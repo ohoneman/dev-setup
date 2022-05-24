@@ -1,0 +1,154 @@
+#=============================================================================
+# basic.toml --- basic configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_inactive_separator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+    statusline_unicode_symbols = false
+
+    # bootstrap
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
+
+    # Managing projects https://github.com/SpaceVim/SpaceVim/blob/master/autoload/SpaceVim/plugins/projectmanager.vim
+    project_rooter_outermost = 1
+    project_rooter_automatically = 1
+    # 0: disable autochdir
+    # 1: change to project root automatically
+    # 2: change to directory of current file automatically
+
+    # disable relativenumber
+    relativenumber = false
+
+[[layers]]
+  name="autocomplete"
+  auto-completion-return-key-behavior='nil'
+  auto-completion-tab-key-behavior='nil'
+  auto-completion-complete-with-key-sequence-delay=0.1
+  auto-completion-complete-with-key-sequence='nil'
+  auto_completion_tab_key_behavior = "smart"
+  autocomplete_method = "neocomplete" # works on most of scenarios
+  #autocomplete_method = "deoplete"   # need to install neovim plugins(disabled)
+  #autocomplete_parens = 0
+[[layers]]
+  name="checkers"
+[[layers]]
+  name="format"
+[[layers]]
+  name="edit"
+[[layers]]
+  name="ui"
+[[layers]]
+  name="core"
+[[layers]]
+  name="core#banner"
+[[layers]]
+  name="core#statusline"
+[[layers]]
+  name="core#tabline"
+[[layers]]
+  name = "debug"
+[[layers]]
+  name = "colorscheme"
+[[layers]]
+  name="shell"
+  default_position='top'
+  default_height=30
+# fzf (choose one of fzf, ctrlp, denite, unite)
+[[layers]]
+  name="fzf"
+[[custom_plugins]]
+ name = 'junegunn/fzf.vim'
+ merged = 0
+[[layers]]
+  name = "lsp"
+  filetypes = [
+    "javascript",
+    "typescript",
+    "css",
+    "python",
+    "sh",
+    "vim",
+  ]
+# disabled ctrlspace, comflict with tabline
+#[[layers]]
+#  name = "ctrlspace"
+#  autoload-workspaces = true
+#  enable-spacevim-styled-keys = true
+[[layers]]
+  name="git"
+[[layers]]
+  name="gtags"
+# bookmark
+[[layers]]
+  name="tools"
+[[layers]]
+  name="tags"
+[[layers]]
+  name="incsearch"
+[[layers]]
+  name = "lang#assembly"
+[[layers]]
+  name = "lang#autohotkey"
+[[layers]]
+  name = "lang#dockerfile"
+[[layers]]
+  name="lang#html"
+[[layers]]
+  name="lang#json"
+# javavi issues and buggy
+[[layers]]
+  name="lang#java"
+[[layers]]
+  name = "lang#kotlin"
+[[layers]]
+  name = "lang#go"
+[[layers]]
+#  name="lang#scala"
+[[layers]]
+  name="lang#javascript"
+### disable typescript, buggy on ubuntu linux (error on each syntax and many TSOnBufEnter)
+#[[layers]]
+#  name="lang#typescript"
+[[layers]]
+  name="lang#python"
+[[layers]]
+  name = "lang#rust"
+[[layers]]
+  name="lang#c"
+[[layers]]
+  name="lang#vim"
+[[layers]]
+  name="lang#xml"
+[[layers]]
+  name="lang#php"
+[[layers]]
+  name="lang#sh"
+[[layers]]
+  name="lang#ps1"
+[[layers]]
+  name="ycmd"
+[[layers]]
+  name = "tmux"
+
+
+

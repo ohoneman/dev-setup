@@ -1,0 +1,47 @@
+# cloud-config for multipass
+## https://medium.com/@ahmadb/using-multipass-with-cloud-init-bc4b92ad27d9
+## https://www.cnbeining.com/2021/09/using-docker-and-docker-compose-on-macos-with-multipass/
+## https://gist.github.com/pmbaumgartner/b08a34f73afcd9b29227a42f3c042b9e
+apt:
+  conf: | # APT config
+    APT {
+      Get {
+        Assume-Yes "true";
+        Fix-Broken "true";
+      };
+    };
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ## TODO: CHANGE PUBLIC KEY FOR USER
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDLq/dxMx0Hm5YsMFAIQ/99sSLMgLg3xUiFWKwDwkGTx53Mv6o3RAUOIVMES6l0Rm12EDHE9NUNnalHqIhxJyLAgOVKoIi3NwrQoi8tpxlFVTzDnh7cMN58B/Vcq4QDwOr4bVDj4XOQlriSXJ68YV5g7/KQDNbew70+epOgrbfTlRMUhYnJeo2CXVuwP4SDIAYpMx/Bw36ioEH08bIUYuoQmGQp+elg/1jvrS+DgYMTgI63UVFKUQZXVVVkFFdUUioa5Cc+ioRIq4KlNHMDTb8qJoVLyv979iVycbYhxJzD15xoLpkqn1cijO3SjlI2PNKoGg3rNXqcvHTlQA6Co+SYPtqsSVivAY1Z4D/K3eEYtwY/FlR5S59ThoHTLUQ1mGNXDdoC66dc4r5hFUwF6gKYnMtkxDjZM9RQsi1ZM0/z88E7BLb+XyrRp8YgUhlgXWJLGf6Pl54w10LuAmvH1aKMsrdc1iZDyjIbDu4T7nPmj5RLtZgg85TsBFuQ/SKa/hE= ubuntu@local
+package_upgrade: true
+packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg
+  - gnupg-agent
+  - software-properties-common
+  - avahi-daemon
+  - libnss-mdns
+  - lsb-release
+runcmd:
+  - apt-get -y update
+  - sudo curl -fsSL https://get.docker.com | sudo bash
+  - sudo systemctl enable docker
+  - sudo systemctl enable -s HUP ssh
+  - sudo groupadd docker
+  - sudo usermod -aG docker ubuntu
+  - curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  - chmod +x /usr/local/bin/docker-compose
+  - sudo systemctl daemon-reload
+# create the docker group
+groups:
+  - docker
+# Add default auto created user to docker group
+system_info:
+  default_user:
+    groups: [docker]
+
