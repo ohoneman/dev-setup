@@ -95,16 +95,16 @@ case "$(uname -s)" in
 
     CYGWIN*|MINGW32*|MSYS*|MINGW*)
     echo 'MS Windows'
-    pip install --upgrade pip setuptools wheel
-    pip install pyenv-win --target $HOME/.pyenv
+    #pip install --upgrade pip setuptools wheel
+    #pip install pyenv-win --target $HOME/.pyenv
 
-    export PATH="/c/ProgramData/scoop/shims:$(cygpath $USERPROFILE)/.poetry/bin:$(cygpath $USERPROFILE)/scoop/apps/python38/current/scripts:$(cygpath $USERPROFILE)/scoop/apps/pyenv/current/pyenv-win/shims:$(cygpath $USERPROFILE)/scoop/shims:$PATH"
+    #export PATH="/c/ProgramData/scoop/shims:$(cygpath $USERPROFILE)/.poetry/bin:$(cygpath $USERPROFILE)/scoop/apps/python38/current/scripts:$(cygpath $USERPROFILE)/scoop/apps/pyenv/current/pyenv-win/shims:$(cygpath $USERPROFILE)/scoop/shims:$PATH"
     
-    export PYENV="$HOME/.pyenv/pyenv-win"
-    export PYENV_ROOT="$PYENV"
-    export PYENV_HOME="$PYENV"
-    export PATH="$PYENV_ROOT/bin:$PYENV_ROOT\shims:$PATH"
-
+    #export PYENV="$HOME/.pyenv/pyenv-win"
+    #export PYENV_ROOT="$PYENV"
+    #export PYENV_HOME="$PYENV"
+    #export PATH="$PYENV_ROOT/bin:$PYENV_ROOT\shims:$PATH"
+    
     ;;
 
     # Add here more strings to compare
@@ -309,12 +309,22 @@ case "$(ps -p $$ | awk '{ print $4 }' | tail -1)" in
     source $HOME/.bash_custom_completion
     ;;
 
+    "/bin/bash")
+    # echo '  loading bash autocompletion'
+    source $HOME/.bash_custom_completion
+    ;;
+
     "-zsh")
     # echo '  loading zsh autocompletion'
     source $HOME/.zsh_custom_completion
     ;;
 
     "zsh")
+    # echo '  loading zsh autocompletion'
+    source $HOME/.zsh_custom_completion
+    ;;
+
+    "/bin/zsh")
     # echo '  loading zsh autocompletion'
     source $HOME/.zsh_custom_completion
     ;;

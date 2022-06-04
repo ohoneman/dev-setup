@@ -47,6 +47,16 @@ fi
 # ~/.fzf/install
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+FZF_SHELL_COMPLETION="$(dirname $(asdf which fzf))/../shell"
+if type brew &>/dev/null
+then
+    [[ -f "${FZF_SHELL_COMPLETION}/completion.zsh" ]] && source "${FZF_SHELL_COMPLETION}/completion.zsh"
+    [[ -f "${FZF_SHELL_COMPLETION}/key-bindings.zsh" ]] && source "${FZF_SHELL_COMPLETION}/key-bindings.zsh"
+else
+    [[ -f "${FZF_SHELL_COMPLETION}/completion.bash" ]] && source "${FZF_SHELL_COMPLETION}/completion.bash"
+    [[ -f "${FZF_SHELL_COMPLETION}/key-bindings.bash" ]] && source "${FZF_SHELL_COMPLETION}/key-bindings.bash"
+fi
+
 ## user level zsh completion
 [ -d ~/.zsh_completion.d ] || mkdir ~/.zsh_completion.d
 

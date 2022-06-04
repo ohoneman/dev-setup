@@ -158,6 +158,9 @@ brew install --cask spectacle
 #curl -L https://raw.githubusercontent.com/Homebrew/homebrew-cask/0facb2228146c44ca9151fd38ea2e5c76f5879be/Casks/microsoft-remote-desktop.rb > microsoft-remote-desktop.rb && brew install --cask microsoft-remote-desktop.rb
 brew install --cask microsoft-remote-desktop
 brew install tree
+# mac disable ctrl+click which open the context menu
+## https://apple.stackexchange.com/questions/118276/disable-system-wide-ctrl-click-as-right-click-in-mavericks
+brew install --cask karabiner-elements
 
 ### --< ps
 # brew install --cask signal
