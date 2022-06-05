@@ -37,7 +37,7 @@
 [core]
 	#editor = 'subl' --wait
 	editor = 'nvim'
-	excludesfile = ~/dev/dev-setup/gitscripts/.gitignore
+	excludesfile = ~/.gitignore
 	autocrlf = false
 [user]
 	name = changeme

@@ -87,12 +87,6 @@ snap install audacity
 # postman
 sudo snap install postman
 
-### firefox developer edition
-# Install the Firefox Developer Edition, formerly know as Aurora, like so:
-sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora
-sudo apt-get update
-sudo apt-get install firefox
-
 ### chrome 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb

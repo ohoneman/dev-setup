@@ -74,11 +74,11 @@ brew install --cask jd-gui
 brew install --cask p4v
 #brew install --cask light-table
 brew install --cask macvim
-# brew install --cask virtualbox
-# brew install --cask virtualbox-extension-pack
-#brew install --cask vagrant
-#brew install --cask vagrant-manager
-#vagrant plugin install vagrant-vbguest
+brew install --cask virtualbox
+brew install --cask virtualbox-extension-pack
+brew install --cask vagrant
+brew install --cask vagrant-manager
+vagrant plugin install vagrant-vbguest
 #brew install --cask sourcetree
 #brew install --cask gitkraken
 #brew install --cask charles

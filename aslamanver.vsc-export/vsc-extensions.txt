@@ -6,6 +6,8 @@ ashhitch.vs-code-css-comments
 aslamanver.vsc-export
 batisteo.vscode-django
 be5invis.vscode-icontheme-nomo-dark
+bierner.markdown-mermaid
+bpruitt-goddard.mermaid-markdown-syntax-highlighting
 buianhthang.xml2json
 caolin.java-run
 christian-kohler.npm-intellisense
@@ -118,7 +120,6 @@ robinbentley.sass-indented
 sashaweiss.bracket-jumper
 searKing.preview-vscode
 sgoley.lookml-syntax-highlighter
-Shan.code-settings-sync
 shd101wyy.markdown-preview-enhanced
 spywhere.guides
 streetsidesoftware.code-spell-checker
@@ -135,6 +136,7 @@ vscjava.vscode-java-test
 vscjava.vscode-maven
 vscjava.vscode-spring-boot-dashboard
 vscjava.vscode-spring-initializr
+vstirbu.vscode-mermaid-preview
 waderyan.nodejs-extension-pack
 wholroyd.jinja
 wix.vscode-import-cost

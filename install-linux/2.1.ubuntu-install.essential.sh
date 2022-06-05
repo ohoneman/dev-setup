@@ -49,6 +49,7 @@ sudo apt install -y --no-install-recommends avahi-daemon
 # sudo apt install -y --no-install-recommends python3.8-venv
 # sudo apt install -y --no-install-recommends python3-pip
 
+sudo apt-get install -y --no-install-recommends vim-gtk3
 sudo apt-get install -y --no-install-recommends neovim-qt
 
 
@@ -74,13 +75,12 @@ echo Install Core Apps
 
 # Development
 echo Install Dev Apps
-# sudo apt install -y --no-install-recommends virtualbox
+sudo apt install -y --no-install-recommends virtualbox
 # sudo usermod -a -G vboxusers $USER
-# sudo apt install -y --no-install-recommends virtualbox-ext-pack
+sudo apt install -y --no-install-recommends virtualbox-ext-pack
 # sudo apt install -y --no-install-recommends virtualbox-guest-additions-iso
-# sudo apt-get install -y --no-install-recommends vagrant
-# sudo apt-get install -y --no-install-recommends vagrant-manager
-# vagrant plugin install vagrant-vbguest
+sudo apt-get install -y --no-install-recommends vagrant
+vagrant plugin install vagrant-vbguest
 
 sudo apt-get install -y --no-install-recommends charles-proxy
 sudo apt-get install -y --no-install-recommends wireshark
@@ -180,7 +180,7 @@ sudo apt-get install -y --no-install-recommends jid
 #sudo apt install -y --no-install-recommends scanbd  # scan button but it's conflict with sane
 
 ### custom script gitsync
-# sudo ln -s ~/dev/dev-setup/gitscripts/gitsync.sh /usr/local/bin
+# sudo cp ~/dev/dev-setup/gitscripts/gitsync.sh /usr/local/bin
 
 # opt vpn
 # sudo snap install openfortivpn

@@ -2,7 +2,7 @@
 cd "$(dirname "$0")"
 
 echo setup gitignore file path
-git config --global core.excludesfile "~/dev/dev-setup/gitignore/.gitignore"
+git config --global core.excludesfile "~/.gitignore"
 git config --global core.autocrlf input
 
 echo setup p4merge difftool

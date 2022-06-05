@@ -1,14 +1,13 @@
 # dev-setup
 script to setup dev environment
 
-expect target location as $HOME/dev/dev-setup
 use package managers as possible.
     - mac: asdf, homebrew
     - linux: asdf, apt-get, snap
     - python: poetry
 
 ## user.home
-Install the bash scripts to setup mac/linux environments (windows for expriment)
+Install the bash scripts to setup mac/linux environments (windows for exprimental)
 
 ## gitignore
 git ignore file
