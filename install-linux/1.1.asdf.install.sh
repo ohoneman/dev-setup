@@ -69,8 +69,8 @@ fi
 
 ### python
 asdf plugin add python
-asdf install python 3.10.4
-asdf global python 3.10.4
+asdf install python latest
+asdf global python latest
 
 ### gcloud
 # asdf plugin add gcloud
@@ -107,8 +107,8 @@ asdf global jq latest
 
 ### nodejs
 asdf plugin add nodejs
-asdf install nodejs 18.2.0
-asdf global nodejs 18.2.0
+asdf install nodejs latest
+asdf global nodejs latest
 
 ### yarn
 asdf plugin add yarn
@@ -147,8 +147,8 @@ asdf global ripgrep latest
 
 ### golang
 asdf plugin add golang
-asdf install golang 1.18.2
-asdf global golang 1.18.2
+asdf install golang latest
+asdf global golang latest
 
 ### gojq
 asdf plugin add gojq
@@ -220,8 +220,8 @@ asdf install neovim latest
 asdf global neovim latest
 
 asdf plugin add lua
-asdf install lua 5.4.4
-asdf global lua 5.4.4
+asdf install lua latest
+asdf global lua latest
 
 # issue on MAC OS X
 #asdf plugin add luaJIT
