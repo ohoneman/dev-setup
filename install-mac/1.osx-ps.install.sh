@@ -226,6 +226,7 @@ brew install --cask jclasslib-bytecode-viewer
 brew install proxychains-ng
 brew install pwntools
 brew install --cask burp-suite
+brew install --cask owasp-zap
 
 ### create ubuntu bootable usb from iso file 
 brew install --cask balenaetcher
