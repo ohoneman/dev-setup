@@ -231,6 +231,7 @@ brew install --cask owasp-zap
 ## minikube install
 brew install hyperkit
 brew install minikube   # will also install kubectl
+brew install kubectx
 minikube config set driver hyperkit
 minikube start --vm-dirver=hyperkit
 
