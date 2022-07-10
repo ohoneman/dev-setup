@@ -235,6 +235,7 @@ brew install kubectx
 minikube config set driver hyperkit
 minikube start --vm-dirver=hyperkit
 minikube addons enable ingress
+minikube stop
 
 ### create ubuntu bootable usb from iso file 
 brew install --cask balenaetcher
