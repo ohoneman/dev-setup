@@ -166,6 +166,7 @@ asdf global goreleaser latest
 go install -v golang.org/x/tools/cmd/godoc@latest
 go install -v github.com/go-delve/delve/cmd/dlv@latest
 go install -v github.com/kisielk/errcheck@latest
+go install -v golang.org/x/tools/gopls@latest
 
 ### rust (too long)
 # asdf plugin add rust 
