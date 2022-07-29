@@ -169,6 +169,9 @@ brew install exa htop bat duf
 brew install --cask ghidra
 brew install gdb
 brew install binutils
+brew install glow
+brew install colordiff
+
 # brew update && brew upgrade gdb
 ## https://stackoverflow.com/questions/18423124/please-check-gdb-is-codesigned-see-taskgated8-how-to-get-gdb-installed-w
 # This error occurs because OSX implements a pid access policy which requires a digital signature for binaries to access other processes pids. To enable gdb access to other processes, we must first code sign the binary. This signature depends on a particular certificate, which the user must create and register with the system.

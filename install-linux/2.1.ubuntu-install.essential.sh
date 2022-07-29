@@ -258,6 +258,12 @@ sudo apt-get install -y --no-install-recommends libcurl4-openssl-dev
 
 sudo apt-get remove -y mitmproxy
 
+sudo apt install -y --no-install-recommends colordiff
+
+# markdown viewer in terminal
+echo 'deb [trusted=yes] https://repo.charm.sh/apt/ /' | sudo tee /etc/apt/sources.list.d/charm.list
+sudo apt update && sudo apt install -y --no-install-recommends glow
+
 ### ubuntu 22.04 synergy, mongodb needed (don't use 22.04, use ubuntu 20.04)
 # MongoDb has no official build for ubuntu 22.04 at the moment.
 # Ubuntu 22.04 has upgraded libssl to 3, and does not propose libssl1.1
