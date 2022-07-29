@@ -29,6 +29,7 @@ npm install -g vim-language-server
 # npm install -g c4builder
 
 npm install -g nodemon
+npm install -g @mermaid-js/mermaid-cli
 
 asdf reshim
 ## --> npm
