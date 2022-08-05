@@ -79,6 +79,9 @@ brew install --cask virtualbox-extension-pack
 brew install --cask vagrant
 brew install --cask vagrant-manager
 vagrant plugin install vagrant-vbguest
+vagrant plugin install vagrant-reload
+brew install libvirt
+vagrant plugin install vagrant-libvirt
 #brew install --cask sourcetree
 #brew install --cask gitkraken
 #brew install --cask charles

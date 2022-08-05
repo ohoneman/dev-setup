@@ -81,6 +81,10 @@ sudo apt install -y --no-install-recommends virtualbox-ext-pack
 # sudo apt install -y --no-install-recommends virtualbox-guest-additions-iso
 sudo apt-get install -y --no-install-recommends vagrant
 vagrant plugin install vagrant-vbguest
+vagrant plugin install vagrant-reload
+# sudo apt-get install -y --no-install-recommends qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+# vagrant plugin install vagrant-libvirt
+
 
 sudo apt-get install -y --no-install-recommends charles-proxy
 sudo apt-get install -y --no-install-recommends wireshark
