@@ -237,6 +237,13 @@ asdf plugin add duf
 asdf install duf latest
 asdf global duf latest
 
+asdf plugin add ruby
+asdf install ruby 3.0.3
+asdf global ruby 3.0.3
+# A Ruby Language Server
+gem install solargraph
+
+
 ## asdf project level
 asdf install
 
