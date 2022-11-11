@@ -243,6 +243,14 @@ minikube start --vm-dirver=hyperkit
 minikube addons enable ingress
 minikube stop
 
+brew install --cask xcodes
+
+# ncurses-hexedit
+brew install hexedit
+brew install hexcurse
+brew install dhex
+brew install --cask hex-fiend
+
 ### create ubuntu bootable usb from iso file 
 brew install --cask balenaetcher
 
