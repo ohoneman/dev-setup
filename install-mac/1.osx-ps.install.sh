@@ -244,6 +244,7 @@ minikube addons enable ingress
 minikube stop
 
 brew install --cask xcodes
+brew install --cask brave-browser
 
 # ncurses-hexedit
 brew install hexedit
