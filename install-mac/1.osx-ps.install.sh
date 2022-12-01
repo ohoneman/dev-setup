@@ -226,7 +226,7 @@ npm install frida
 # mac analysis mach-o file
 wget -qO- http://stevenygard.com/download/class-dump-3.5.tar.gz  | tar xvz - -C /usr/local/bin
 # curl -L https://raw.githubusercontent.com/Homebrew/homebrew-cask/c1bd7ef2499535b2c577cfce5a715996b9397809/Casks/multipass.rb -o multipass.rb && brew install multipass.rb && rm multipass.rb
-brew install --cask multipass # minimum os vm
+# brew install --cask multipass # minimum os vm
 # brew install lxc # application container vm
 brew install --cask jclasslib-bytecode-viewer
 brew install proxychains-ng
