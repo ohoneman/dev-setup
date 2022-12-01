@@ -255,6 +255,10 @@ brew install --cask hex-fiend
 ### create ubuntu bootable usb from iso file 
 brew install --cask balenaetcher
 
+### docker desktop alternative
+brew install docker docker-compose kubectl kubectx
+brew install colima
+
 ### --> ps
 
 
