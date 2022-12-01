@@ -243,7 +243,7 @@ export ANDROID_AVD_HOME=~/.android/avd
 export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/build-tools/32.1.0-rc1:$PATH"
 
 # multipass docker remote host (https://medium.com/@gourneau/docker-engine-with-multipass-on-macos-9d22b8ade35c)
-export DOCKER_HOST="ssh://ubuntu@docker.local"
+# export DOCKER_HOST="ssh://ubuntu@docker.local"
 
 # mac analysis mach-o file
 export PATH="$PATH:/usr/local/bin/class-dump-3.5"
