@@ -174,6 +174,7 @@ brew install gdb
 brew install binutils
 brew install glow
 brew install colordiff
+brew install --cask x2goclient
 
 # brew update && brew upgrade gdb
 ## https://stackoverflow.com/questions/18423124/please-check-gdb-is-codesigned-see-taskgated8-how-to-get-gdb-installed-w
