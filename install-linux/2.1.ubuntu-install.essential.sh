@@ -291,6 +291,9 @@ sudo apt-get install -y --no-install-recommends xsel
 # pdfinfo
 sudo apt-get install -y --no-install-recommends poppler-utils
 
+# Photo EXIF Data exiftool
+sudo apt-get install -y --no-install-recommends install libimage-exiftool-perl
+
 
 ### download postgresql jdbc connection and later install into sqldeveloper
 mkdir -p ~/utils
