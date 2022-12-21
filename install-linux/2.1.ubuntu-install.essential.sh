@@ -288,6 +288,10 @@ sudo apt-get install -y --no-install-recommends proxychains
 
 sudo apt-get install -y --no-install-recommends xsel
 
+# pdfinfo
+sudo apt-get install -y --no-install-recommends poppler-utils
+
+
 ### download postgresql jdbc connection and later install into sqldeveloper
 mkdir -p ~/utils
 pushd ~/utils
