@@ -237,7 +237,10 @@ alias code='GTK_IM_MODULE="xim" code'
 [ -f /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ] && [ ! -f /usr/local/bin/subl ] && sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 # android sdk path
-export ANDROID_HOME=~/Library/Android/sdk
+## if linux
+[ -d ~/Android/Sdk ] && export ANDROID_HOME=~/Android/Sdk
+## if mac
+[ -d ~/Library/Android/sdk ] && export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export ANDROID_AVD_HOME=~/.android/avd
 export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/build-tools/32.1.0-rc1:$PATH"
