@@ -80,6 +80,7 @@ sudo sh -c 'echo "deb http://www.charlesproxy.com/packages/apt/ charles-proxy ma
 wget -q http://www.charlesproxy.com/packages/apt/PublicKey -O - | sudo apt-key add -
 sudo apt-get update -y
 sudo apt-get install -y --no-install-recommends charles-proxy
+sudo apt install -y --no-install-recommends apktool
 
 npm install -g apk-mitm
 
