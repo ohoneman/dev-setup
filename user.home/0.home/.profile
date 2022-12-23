@@ -239,8 +239,12 @@ alias code='GTK_IM_MODULE="xim" code'
 # android sdk path
 ## if linux
 [ -d ~/Android/Sdk ] && export ANDROID_HOME=~/Android/Sdk
+[ -d ~/Android/Sdk ] && sudo ln -s /snap/android-studio/125/android-studio/bin/studio.sh /usr/local/bin/android-studio.sh
+
 ## if mac
 [ -d ~/Library/Android/sdk ] && export ANDROID_HOME=~/Library/Android/sdk
+[ -d ~/Library/Android/sdk ] && alias android-studio='/Applications/Android\ Studio.app/Contents/MacOS/studio'
+
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export ANDROID_AVD_HOME=~/.android/avd
 export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/build-tools/32.1.0-rc1:$PATH"
