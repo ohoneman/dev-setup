@@ -262,6 +262,8 @@ brew install colima
 
 ### --> ps
 
+### android
+brew install scrcpy
 
 # cleanup
 brew cleanup --force
