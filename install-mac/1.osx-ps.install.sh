@@ -260,6 +260,8 @@ brew install --cask balenaetcher
 brew install docker docker-compose kubectl kubectx
 brew install colima
 
+brew install autoconf automake libtool
+
 ### --> ps
 
 ### android
