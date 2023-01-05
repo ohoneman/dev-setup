@@ -261,6 +261,8 @@ brew install docker docker-compose kubectl kubectx
 brew install colima
 
 brew install autoconf automake libtool
+brew install nss
+brew install mkcert
 
 ### --> ps
 
