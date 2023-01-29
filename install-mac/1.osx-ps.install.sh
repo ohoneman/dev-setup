@@ -266,7 +266,7 @@ brew install mkcert
 
 ### --> ps
 
-### android
+### android screen copy
 brew install scrcpy
 
 # cleanup
