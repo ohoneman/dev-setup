@@ -94,7 +94,8 @@ npm install frida
 
 # brew install --cask jclasslib-bytecode-viewer
 sudo apt install -y --no-install-recommends proxychains4
-# android
+
+### android screen copy
 sudo apt install -y --no-install-recommends scrcpy
 
 pip install -U pwntools
