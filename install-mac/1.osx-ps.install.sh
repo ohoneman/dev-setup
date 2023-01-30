@@ -268,6 +268,7 @@ brew install mkcert
 
 ### android screen copy
 brew install scrcpy
+brew install --cask keka
 
 # cleanup
 brew cleanup --force
