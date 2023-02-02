@@ -264,6 +264,7 @@ brew install autoconf automake libtool
 brew install nss
 brew install mkcert
 
+brew install dex2jar
 ### --> ps
 
 ### android screen copy

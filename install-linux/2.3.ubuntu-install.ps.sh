@@ -98,6 +98,9 @@ sudo apt install -y --no-install-recommends proxychains4
 ### android screen copy
 sudo apt install -y --no-install-recommends scrcpy
 
+sudo apt install -y --no-install-recommends dex2jar
+
+
 pip install -U pwntools
 
 ### --> debug
