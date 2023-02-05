@@ -247,7 +247,7 @@ alias code='GTK_IM_MODULE="xim" code'
 
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export ANDROID_AVD_HOME=~/.android/avd
-export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/build-tools/32.1.0-rc1:$PATH"
+export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/build-tools/33.0.1:$PATH"
 
 # multipass docker remote host (https://medium.com/@gourneau/docker-engine-with-multipass-on-macos-9d22b8ade35c)
 # export DOCKER_HOST="ssh://ubuntu@docker.local"
