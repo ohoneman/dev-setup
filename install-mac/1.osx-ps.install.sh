@@ -271,6 +271,8 @@ brew install dex2jar
 brew install scrcpy
 brew install --cask keka
 
+brew install highlight  #highlight text
+
 # cleanup
 brew cleanup --force
 rm -f -r /Library/Caches/Homebrew/*
