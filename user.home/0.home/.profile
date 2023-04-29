@@ -229,9 +229,13 @@ alias gita="python3 -m gita"
 
 ### ubuntu emoji shortcut issue with vscode (ctrl+shift+e)
 # https://askubuntu.com/questions/1125726/how-to-disable-ctrl-shift-e-keybinding-from-showing-eeeee-and-loading-emoji-opti
-alias code='GTK_IM_MODULE="xim" code'
+# alias code='GTK_IM_MODULE="xim" code'
+
 ### modify manual on snap vscode launcher
 ### sudo subl /var/lib/snapd/desktop/applications/code_code.desktop
+
+### link vscode
+[ -f /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code ] && [ ! -f /usr/local/bin/code ] && sudo ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code /usr/local/bin/code
 
 ### link subl
 [ -f /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ] && [ ! -f /usr/local/bin/subl ] && sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
